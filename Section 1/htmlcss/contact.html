@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Samuel Ibitoye</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Samuel Ibitoye</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <main class="container mt-5">
+      <section id="contact" class="text-center my-5">
+        <h2 class="display-5 mb-3 animate__animated animate__zoomIn">
+          Contact Me
+        </h2>
+        <p class="lead">
+          Feel free to reach out if you're interested in working together or
+          have any questions!
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputMessage" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="inputMessage"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+
+            <!-- Office Contact Info -->
+            <div class="mt-5">
+              <h5 class="animate__animated animate__fadeInLeft">
+                Contact Information
+              </h5>
+              <p class="lead animate__animated animate__fadeInRight">
+                Office Address: Gwagwalada, Abuja, Nigeria
+              </p>
+              <p class="lead animate__animated animate__fadeInRight">
+                Telephone: +234 123 4567
+              </p>
+              <p class="lead animate__animated animate__fadeInRight">
+                Email:
+                <a href="mailto:samuel@example.com">samuel@example.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div class="col-md-6">
+            <h5 class="animate__animated animate__fadeInLeft">Our Location</h5>
+            <iframe
+              class="w-100"
+              height="300"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.050990877748!2d7.49415781513249!3d8.249067691237933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039f07c5f3a0515%3A0x5f5b5f32c6af4d95!2sGwagwalada%2C%20Abuja%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1695864648375!5m2!1sen!2sus"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <p class="mb-0">&copy; 2024 Samuel Ibitoye. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

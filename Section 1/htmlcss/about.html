@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Samuel Ibitoye</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Samuel Ibitoye</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <main class="container mt-5">
+      <section id="about" class="my-5 fade-in">
+        <div class="row align-items-center">
+          <!-- Portrait Image -->
+          <div class="col-md-4 text-center">
+            <img
+              src="https://via.placeholder.com/250x250"
+              alt="Portrait of Samuel Ibitoye"
+              class="img-fluid rounded-circle mb-3"
+            />
+          </div>
+
+          <!-- About Me Content -->
+          <div class="col-md-8">
+            <h2 class="display-5 mb-3 animate__animated animate__zoomIn">
+              About Me
+            </h2>
+            <p class="lead">
+              I am a passionate and versatile full-stack developer with
+              extensive experience in building modern, scalable, and efficient
+              web applications using cutting-edge technologies. From frontend to
+              backend, I ensure every part of the system is optimized for
+              performance and scalability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Me Section -->
+      <section id="why-choose-me" class="my-5 fade-in">
+        <div class="row align-items-center">
+          <!-- Why Choose Me Text -->
+          <div class="col-md-8">
+            <h2 class="display-6 mb-3 animate__animated animate__zoomIn">
+              Why Choose Me?
+            </h2>
+            <p class="lead">
+              I combine technical expertise with creative problem-solving to
+              deliver solutions that not only meet but exceed client
+              expectations. With a keen focus on detail, I take pride in
+              creating user-friendly, responsive, and high-performance
+              applications.
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                <strong>Experience:</strong> Over 10 years in full-stack
+                development
+              </li>
+              <li>
+                <strong>Reliability:</strong> On-time delivery and support
+              </li>
+              <li>
+                <strong>Quality:</strong> Top-notch code with scalability in
+                mind
+              </li>
+              <li>
+                <strong>Client Satisfaction:</strong> Proven record of happy
+                clients
+              </li>
+            </ul>
+          </div>
+
+          <!-- Why Choose Me Image -->
+          <div class="col-md-4 text-cente animate__animated animate__fadeIn">
+            <img
+              src="https://via.placeholder.com/300x300"
+              alt="Why Choose Me"
+              class="img-fluid rounded mb-3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Companies Section -->
+      <section id="companies" class="text-center my-5 fade-in">
+        <h2 class="display-6 mb-4 animate__animated animate__zoomIn">
+          Trusted by
+        </h2>
+        <div class="row g-3 justify-content-center">
+          <!-- Company Logo 1 -->
+          <div class="col-6 col-md-3">
+            <img
+              src="https://via.placeholder.com/200x100?text=Company+1"
+              alt="Company 1"
+              class="img-fluid"
+            />
+          </div>
+
+          <!-- Company Logo 2 -->
+          <div class="col-6 col-md-3">
+            <img
+              src="https://via.placeholder.com/200x100?text=Company+2"
+              alt="Company 2"
+              class="img-fluid"
+            />
+          </div>
+
+          <!-- Company Logo 3 -->
+          <div class="col-6 col-md-3">
+            <img
+              src="https://via.placeholder.com/200x100?text=Company+3"
+              alt="Company 3"
+              class="img-fluid"
+            />
+          </div>
+
+          <!-- Company Logo 4 -->
+          <div class="col-6 col-md-3">
+            <img
+              src="https://via.placeholder.com/200x100?text=Company+4"
+              alt="Company 4"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <p class="mb-0">&copy; 2024 Samuel Ibitoye. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Add fade-in effect to elements on scroll
+      const fadeIns = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate__fadeIn");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      fadeIns.forEach((fadeIn) => {
+        observer.observe(fadeIn);
+      });
+    </script>
+  </body>
+</html>

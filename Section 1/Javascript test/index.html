@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Test Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #colorBox {
+        width: 100%;
+        height: 200px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        background-color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">JavaScript Test Page</h1>
+
+      <section class="mt-5">
+        <h2>Even Numbers Filter</h2>
+        <div class="mb-3">
+          <label for="numberInput" class="form-label"
+            >Enter Numbers (comma-separated)</label
+          >
+          <input
+            type="text"
+            id="numberInput"
+            class="form-control"
+            placeholder="e.g. 1,2,3,4,5"
+          />
+        </div>
+        <button class="btn btn-primary" id="filterButton">
+          Get Even Numbers
+        </button>
+        <p id="evenNumbersResult" class="mt-3"></p>
+      </section>
+
+      <section class="mt-5">
+        <h2>Change Background Color</h2>
+        <div id="colorBox">Click Me!</div>
+      </section>
+    </div>
+
+    <script>
+      // Function to filter even numbers from an array
+      function getEvenNumbers(numbers) {
+        return numbers.filter((number) => number % 2 === 0);
+      }
+
+      // Event listener for the button to show even numbers
+      document.getElementById("filterButton").addEventListener("click", () => {
+        const input = document.getElementById("numberInput").value;
+        const numberArray = input
+          .split(",")
+          .map((num) => parseInt(num.trim(), 10))
+          .filter((num) => !isNaN(num)); // Convert input to an array of numbers
+        const evenNumbers = getEvenNumbers(numberArray);
+        document.getElementById(
+          "evenNumbersResult"
+        ).textContent = `Even Numbers: ${evenNumbers.join(", ")}`;
+      });
+
+      // Event listener for changing the background color of the div
+      const colorBox = document.getElementById("colorBox");
+      colorBox.addEventListener("click", () => {
+        const randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16); // Generate random color
+        colorBox.style.backgroundColor = randomColor;
+        colorBox.textContent = `Color: ${randomColor}`; // Show the color
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
